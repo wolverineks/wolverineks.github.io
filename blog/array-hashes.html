@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Arrays and Hashes: An Introduction to Arrays and Hashes</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="left wide post">
+      <h3>Arrays and Hashes: An Introduction to Arrays and Hashes</h3>
+      <h4>February 20th, 2016</h4>
+
+      <p>
+        Arrays and Hashes are useful object in Ruby. You can use them to store information. In this post we will discuss what arrays and hashes are, when to use them, how to create them, and provide some examples.
+      </p>
+
+      <h4>Arrays</h4>
+
+      <p>According to Ruby-Doc.org,</p>
+
+      <p><q cite="http://www.ruby-doc.org">Arrays are ordered, integer-indexed collections of any object.
+      </q></p>
+
+      <p>But what does this mean?</p>
+
+      <p>
+        This means an array is a single object that can contain many different objects, making it easy to manipulate and use. You can consider it a single list, with many items on it, but which can be used simply by referencing the name of the list.
+      </p>
+
+      <p>Example: If you have a list of students in a class, you could create an array, add all the names of the students, then do something interesting with all the names in one foul swoop, instead of keeping track of each student individually, and dupicating the same code to use each of the students.</p>
+
+      <pre>
+        <code>
+      # creates an array
+      students = ["Tom", "Dick", "Harry", "Sally"]
+
+      # iterates though the array and does something
+      # interesting with each student
+      students.each do |student|
+        student.do_something_interesting
+      end
+        </code>
+      </pre>
+
+      <p>To accomplish the same task without an array would take dozens of lines of code, take more time to write, and increase the potential for mistakes.</p>
+
+      <p>Here are some additional ways you can create and manipulate arrays.</p>
+
+      <pre>
+        <code>
+      # Creates a new, empty array, assigns it to some_variable
+      some_variable = Array.new()
+
+      # Creates a new, empty array, assigns it to some_variable
+      some_variable = []
+
+      # Creates a new array, with 3 nil values, assigns it to some_variable
+      some_variable = Array.new(3)
+        </code>
+      </pre>
+
+      <p>Here are some ways to access the elements of an array.</p>
+
+      <pre>
+        <code>
+      # gives access to the first element of an array
+      some_array[0]
+
+      # gives access to the last element of an array
+      some_array[-1]
+
+      # gives access to the 2nd element through the 5th element
+      some_array[1..4]
+        </code>
+      </pre>
+
+      <p>Here are some ways to add elements to an array.</p>
+
+      <pre>
+        <code>
+      # adds some_element to some_array
+      some_array << some_element
+
+      # adds some_element to some_array
+      some_array.push(some_element)
+        </code>
+      </pre>
+
+      <p>Here are some ways to remove elements from an array.</p>
+
+      <pre>
+        <code>
+      # removes the last element from the array
+      some_array.pop
+
+      # removes the first element from the array
+      some_array.shift
+        </code>
+      </pre>
+
+      <h4>Hash</h4>
+
+      <p>According to Ruby-Doc.org,</p>
+
+      <p><q cite="http://www.ruby-doc.org">A Hash is a dictionary-like collection of unique keys and their values. Also called associative arrays, they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type.</q></p>
+
+      <p>But what does this mean?</p>
+
+      <p>This means that while an array is like an ordered list, with each element referenced with a number, a hash is a list where you get to choose the thing that each element is references with.</p>
+
+      <p>Hashes are useful when you have a list of items that each have a value you want to keep track of.</p>
+
+      <p>Example: If you had a list of classes, and you wanted to keep track of how many students were in each class.</p>
+
+      <pre>
+        <code>
+          # creates a new hash and stores some information in it
+          classes = {
+            history: 25,
+            literature: 23,
+            geography: 15,
+            mathematics: 32,
+          }
+        </code>
+      </pre>
+
+      <p>To accomplish the same task without a hash would take dozens of lines of code, take more time to write, and increase the potential for mistakes.</p>
+
+      <pre>
+        <code>
+      # Creates a new, empty hash, assigns it to some_variable
+      some_variable = Hash.new
+
+      # Creates a new, empty hash, assigns it to some_variable
+      some_variable = {}
+        </code>
+      </pre>
+
+      <p>Here are some ways to access the elements of an hash.</p>
+
+      <pre>
+        <code>
+      # gives access to the value accociated with :some_key
+      some_hash[:some_key]
+        </code>
+      </pre>
+
+      <p>Here are some ways to add elements to an hash.</p>
+
+      <pre>
+        <code>
+      # adds some_element to some_hash
+      some_hash[:some_key] = some_value
+        </code>
+      </pre>
+
+      <p>Here are some ways to remove elements from an hash.</p>
+
+      <pre>
+        <code>
+      # removes the first key_vlue pair from the hash
+      some_hash.shift
+        </code>
+      </pre>
+    </div>
+
+    <div class="right narrow">
+      <div class="archives">
+        <h3>Archives</h3>
+        <ul>
+          <li><a href="#">2016</a></li>
+          <ul>
+            <li><a href="#">January</a></li>
+          </ul>
+          <li><a href="#">2015</a></li>
+          <ul>
+            <li><a href="#">December</a></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="tags">
+        <h3>Tags</h3>
+        <ul>
+          <li><a href="#">Git</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <a href="../index.html" class="nav-button" id="button-home">HOME</a>
+      <a href="index.html" class="nav-button" id="button-home">BLOG</a>
+      <a href="#" class="nav-button" id="button-home">PROJECTS</a>
+      <a href="#" class="nav-button" id="button-home">CONTACT</a>
+    </nav>
+
+  </main>
+</body>
+
+</html>
