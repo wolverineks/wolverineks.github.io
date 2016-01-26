@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>wolverineks</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  <title>wolverineks</title>
+</head>
 
-    <main>
+<body>
 
-      <div>
+  <main>
+    <div class="left narrow">
+      <div class="short-info">
+        <img src="imgs/logo.png" alt="wolverineks logo" id="logo-pic" />
 
-        <img src="imgs/lrg.jpg" alt="large image">
+        <h2>wolverineks</h2>
 
+        <p>
+          Continually learning. Continually growing.
+        </p>
+        <p>Current: Ruby, Rails.</p>
+        <p>Soon: CSS, Javascript, EmberJS, Elixir.</p>
       </div>
 
-      <div>
+      <hr>
 
-        <div>
+      <div class="contacts">
+        Contact Me
+        <br>
 
-          <img src="imgs/logo.png" alt="wolverineks logo" />
-
-          <p>This is the section where I write something about myself. Short. Sweet. To the point</p>
-
-        </div>
-
-        <div>
-          Contact Me<br>
-
-          <a href="#"><img src="imgs/twitter.png" alt="twitter icon" /></a>
-          <a href="#"><img src="imgs/linked-in.png" alt="linked-in icon" /></a>
-          <a href="#"><img src="imgs/github.png" alt="github icon" /></a>
-          <a href="#"><img src="imgs/email.png" alt="email icon" /></a>
-
-        </div>
-
+        <a href="https://www.twitter.com/wolverineks"><img src="imgs/twitter.png" alt="twitter icon" class="contact-image" /></a>
+        <a href="https://www.linkedin.com/in/kevin-sullivan-b268a015"><img src="imgs/linked-in.png" alt="linked-in icon" class="contact-image" /></a>
+        <a href="https://www.github.com/wolverineks"><img src="imgs/github.png" alt="github icon" class="contact-image" /></a>
+        <a href="mailto:wolverine.ks@gmail.com"><img src="imgs/email.png" alt="email icon" class="contact-image" /></a>
       </div>
+    </div>
+
+    <div class="right wide">
+      <img src="imgs/lrg.jpg" alt="large image" id="main-pic">
+    </div>
 
 
-    </main>
+    <nav>
+      <a href="index.html" class="nav-button" id="button-home">HOME</a>
+      <a href="blog/index.html" class="nav-button" id="button-home">BLOG</a>
+      <a href="#" class="nav-button" id="button-home">PROJECTS</a>
+      <a href="#" class="nav-button" id="button-home">CONTACT</a>
+    </nav>
 
-    <footer>
-
-      <nav>
-        <ul>
-          <li>HOME</li>
-          <li>BLOG</li>
-          <li>PROJECTS</li>
-          <li>CONTACT</li>
-        </ul>
-      </nav>
-
-    </footer>
-
-  </body>
+  </main>
+</body>
 
 </html>
