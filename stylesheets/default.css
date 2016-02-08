@@ -72,3 +72,12 @@ nav {
   background-color: gray;
   color: white;
 }
+.button-list {
+  list-style: none;
+}
+.button-list-element {
+  background-color: grey;
+  margin: 5px;
+  width: 100%;
+  padding: 5px;
+}
