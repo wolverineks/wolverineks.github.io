@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>blog index</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="left wide post">
+      <h3>Example Class: What are the Elements of a Class</h3>
+      <h4>February 9, 2016</h4>
+      <hr>
+      <p>
+        Ruby is an object oriented language. Sometimes this is referred to as "OOP" (object oriented programming). This means that everything in your code is a type of object. The originators of OOP wanted the language to mirror the physical world. The real world is full of objects that have characteristics and behavior. Ruby is full of objects that have characteristics and behaviors.
+      </p>
+      <p>
+        Here is an example of the code your Ruby environment uses to create a new object. It is a set of instructions that define the characteristics and behaviors of all 'Chairs' in your currently running Ruby environment.
+      </p>
+
+      <pre>
+        <code>
+
+          class Chair
+
+            attr_reader :color # Automagically creates a getter method
+            attr_accessor :height # Automagically creates a getter and setter method
+
+          # This is an example of a class variable
+            @@count = 0
+
+          # This is the method that executes when creating a new instance of the Chair class
+            def initialize(color, height)
+              @color = color
+              @height = height
+              @@count += 1
+            end
+
+          # This is an example of a class method
+            def self.count
+              puts "There are currently #{@@count} chairs."
+            end
+
+          # This is an example of an instance method
+            def spin(direction, strength)
+              puts "The chair is spinning #{direction}."
+              sleep strength
+              puts "The chair has stopped spinning."
+            end
+
+          end
+
+        </pre>
+      </code>
+
+      <p>
+        Here is some more code that you execute in the Ruby environment. This code is telling Ruby to execute the code from above, in order to create several 'Chairs' and interact with these 'Chairs'.
+      </p>
+
+      <code>
+        <pre>
+
+          Chair.count
+
+          # This is an example of creating a new instance of the Chair class.
+          chair1 = Chair.new("black", "high")
+          chair2 = Chair.new("black", "high")
+          chair3 = Chair.new("black", "high")
+          chair4 = Chair.new("black", "high")
+          chair5 = Chair.new("black", "high")
+
+          Chair.count
+
+          # This is an example of using an instance method.
+          chair.spin("counter-clockwise", 1)
+
+          # These are examples of accessing instance variables through a getter methods.
+          p "The height of the chair is #{chair.height}."
+          p "The color of the chair is #{chair.color}."
+
+          # This is an example of modifying an instance variable with a setter method.
+          chair.height = "low"
+          p "The height of the chair is #{chair.height}."
+        </code>
+      </pre>
+
+      <p>
+        Here are some explanations of several parts of the first section of code.
+        <ul>
+          <li>
+            Class Variable: A class variable is a variable that is shared by all instances of a class.
+          </li>
+          <li>
+            Instance Variable:  An instance variable is a variable that is references with the same code for each instance of a class, but with returns a value that is unique to each instance of the class.
+          </li>
+          <li>
+            Local Variable: A local variable is a variable that is only accessible within the method in which it is created.
+          </li>
+          <li>
+            Class Method: A class method is a method that you call by referencing the class and the class method.
+          </li>
+          <li>
+            Instance Method: An instance method is a method that you call by referencing an instance of a class and the method
+          </li>
+
+
+
+
+
+
+        </ul>
+      </p>
+
+    </div>
+
+    <div class="right narrow">
+      <div class="archives">
+        <h3>Archives</h3>
+        <ul>
+          <li><a href="#">2016</a></li>
+          <ul>
+            <li><a href="#">January</a></li>
+          </ul>
+          <li><a href="#">2015</a></li>
+          <ul>
+            <li><a href="#">December</a></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="tags">
+        <h3>Tags</h3>
+        <ul>
+          <li><a href="#">Git</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <a href="../index.html" class="nav-button" id="button-home">HOME</a>
+      <a href="index.html" class="nav-button" id="button-home">BLOG</a>
+      <a href="#" class="nav-button" id="button-home">PROJECTS</a>
+      <a href="#" class="nav-button" id="button-home">CONTACT</a>
+    </nav>
+
+  </main>
+</body>
+
+</html>
