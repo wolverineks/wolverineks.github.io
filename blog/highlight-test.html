@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<title>highlight.js</title>
+<link rel="stylesheet" href="/static/styles.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/highlight/highlight.pack.js"></script>
+
+
+<script>
+  function initSnippet() {
+    var snippet = $('#snippet pre code');
+    hljs.highlightBlock(snippet.get(0));
+    var style = $('#style-link').text();
+    $('.codestyle').each(function(i, e) {
+      e.rel = 'stylesheet';
+      e.disabled = !e.href.match(style + '\\.css$');
+    });
+    $('#language-link').html(snippet.get(0).result.language);
+    $('#control a').click(function(e) {
+      e.preventDefault();
+      $('#snippet').load(this.href, initSnippet);
+    });
+  }
+
+  $(document).ready(initSnippet);
+</script>
+
+
+<link class="codestyle" rel="stylesheet" href="/static/demo/styles/default.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/solarized-dark.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/solarized-light.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/github.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/railscasts.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/monokai-sublime.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/mono-blue.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/tomorrow.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/color-brewer.css">
+<link class="codestyle" rel="alternate stylesheet" href="/static/demo/styles/zenburn.css">
+
+
+
+<div id="header">
+  <h1>highlight.js</h1>
+  <p>Syntax highlighting for the Web</p>
+</div>
+
+
+<div id="snippet">
+<pre><code>import Foundation
+
+@objc class Person: Entity {
+  var name: String!
+  var age:  Int!
+
+  init(name: String, age: Int) {
+    /* /* ... */ */
+  }
+
+  // Return a descriptive string for this person
+  func description(offset: Int = 0) -&gt; String {
+    return &quot;\(name) is \(age + offset) years old&quot;
+  }
+}</code></pre>
+<div id="control">
+  <p>language: <a id="language-link" href="/?snippet=11&amp;style=0">...</a>
+  <p>style: <a id="style-link" href="/?snippet=10&amp;style=1">default</a>
+</div>
+
+</div>
+<div id="description">
+  <ul id="features" class="ui">
+    <li>146 languages and 66 styles
+        (<a href="/static/demo/">live demo</a>)
+    <li>automatic language detection
+    <li>multi-language code highlighting
+    <li>available for node.js
+    <li>works with any markup
+    <li>compatible with any js framework
+  </ul>
+  <div id="download">
+    <p><a href="/download/">Get version 9.1.0</a>
+  </div>
+  <p id="usage"><a href="/usage/">Usage</a>
+</div>
+<div id="contribute">
+  <p><a href="/contribute/">Contribute</a>
+</div>
+<div id="news">
+  <div id="social">
+    <p><a href="https://twitter.com/highlightjs"><img src="/static/twitter.png">@highlightjs</a>
+  </div>
+  <h2>News</h2>
+  <ol>
+
+    <li id="news-91">
+      <div class="time"><a href="#news-91">2016-01-06</a></div>
+      <div class="text"><p>Version 9.1.0</p>
+<p>New languages:</p>
+<ul>
+<li><em>Stan</em> by <a href="http://brendanrocks.com">Brendan Rocks</a></li>
+<li><em>BASIC</em> by <a href="https://github.com/raphnet">Raphaël Assénat</a></li>
+<li><em>GAUSS</em> by <a href="https://github.com/matthewevans">Matt Evans</a></li>
+<li><em>DTS</em> by <a href="https://github.com/mbr0wn">Martin Braun</a></li>
+<li><em>Arduino</em> by <a href="https://github.com/smellai">Stefania Mellai</a></li>
+</ul>
+<p>New Styles:</p>
+<ul>
+<li><em>Arduino Light</em> by <a href="https://github.com/smellai">Stefania Mellai</a></li>
+</ul>
+<p>Improvements to existing languages and styles:</p>
+<ul>
+<li>Handle return type annotations in Python</li>
+<li>Allow shebang headers in Javascript</li>
+<li>Support strings in Rust meta</li>
+<li>Recognize <code>struct</code> as a class-level definition in Rust</li>
+<li>Recognize b-prefixed chars and strings in Rust</li>
+<li>Better numbers handling in Verilog</li>
+</ul></div>
+
+    <li id="news-90">
+      <div class="time"><a href="#news-90">2015-12-01</a></div>
+      <div class="text"><p>Version 9.0.0</p>
+<p>The new major version brings a reworked styling system. Highlight.js now defines
+a limited set of highlightable classes giving a consistent result across all the
+styles and languages. You can read a more detailed explanation and background in
+the <a href="https://github.com/isagalaev/highlight.js/issues/348">tracking issue</a> that started this long process back in May.</p>
+<p>This change is backwards incompatible for those who uses highlight.js with a
+custom stylesheet. The <a href="http://highlightjs.readthedocs.org/en/latest/style-guide.html">new style guide</a> explains how to write styles
+in this new world.</p>
+<p>Bundled themes have also suffered a significant amount of improvements and may
+look different in places, but all the things now consistent and make more sense.
+Among others, the Default style has got a refresh and will probably be tweaked
+some more in next releases. Please do give your feedback in our
+<a href="https://github.com/isagalaev/highlight.js/issues">issue tracker</a>.</p>
+<p>New languages in this release:</p>
+<ul>
+<li><em>Caché Object Script</em> by <a href="https://github.com/ZitRos">Nikita Savchenko</a></li>
+<li><em>YAML</em> by <a href="https://github.com/zealot128">Stefan Wienert</a></li>
+<li><em>MIPS Assembler</em> by <a href="https://github.com/Nebuleon">Nebuleon Fumika</a></li>
+<li><em>HSP</em> by <a href="https://github.com/prince-0203">prince</a></li>
+</ul>
+<p>Improvements to existing languages and styles:</p>
+<ul>
+<li>ECMAScript 6 modules import now do not require closing semicolon.</li>
+<li>ECMAScript 6 classes constructors now highlighted.</li>
+<li>Template string support for Typescript, as for ECMAScript 6.</li>
+<li>Scala case classes params highlight fixed.</li>
+<li>Built-in names introduced in Julia v0.4 added by <a href="https://github.com/bicycle1885">Kenta Sato</a>.</li>
+<li>Refreshed Default style.</li>
+</ul>
+<p>Other notable changes:</p>
+<ul>
+<li><a href="https://github.com/isagalaev/highlight.js#web-workers">Web workers support</a> added bu <a href="https://github.com/frigus02">Jan Kühle</a>.</li>
+<li>We now have tests for compressed browser builds as well.</li>
+<li>The building tool chain has been switched to node.js 4.x. and is now
+  shamelessly uses ES6 features all over the place, courtesy of <a href="https://github.com/sourrust">Jeremy Hull</a>.</li>
+<li>License added to non-compressed browser build.</li>
+</ul></div>
+
+    <li id="news-89">
+      <div class="time"><a href="#news-89">2015-10-19</a></div>
+      <div class="text"><p>Version 8.9.1</p>
+<p>Some last-minute changes reverted due to strange bug with minified browser build:</p>
+<ul>
+<li>Scala case classes params highlight fixed</li>
+<li>ECMAScript 6 modules import now do not require closing semicolon</li>
+<li>ECMAScript 6 classes constructors now highlighted</li>
+<li>Template string support for Typescript, as for ECMAScript 6</li>
+<li>License added to not minified browser build</li>
+</ul></div>
+
+    <li id="news-88">
+      <div class="time"><a href="#news-88">2015-10-19</a></div>
+      <div class="text"><p>Version 8.9.0</p>
+<p>New languages:</p>
+<ul>
+<li><em>crmsh</em> by <a href="https://github.com/krig">Kristoffer Gronlund</a></li>
+<li><em>SQF</em> by <a href="https://github.com/senevoldsen90">Søren Enevoldsen</a></li>
+</ul>
+<p>Notable fixes and improvements to existing languages:</p>
+<ul>
+<li>Added <code>abstract</code> and <code>namespace</code> keywords to TypeScript by <a href="https://github.com/DanielRosenwasser">Daniel Rosenwasser</a></li>
+<li>Added <code>label</code> support to Dockerfile by <a href="https://github.com/abtris">Ladislav Prskavec</a></li>
+<li>Crystal highlighting improved by <a href="https://github.com/MakeNowJust">Tsuyusato Kitsune</a></li>
+<li>Missing Swift keywords added by <a href="https://github.com/natecook1000">Nate Cook</a></li>
+<li>Improve detection of C block comments</li>
+<li>Scala case classes params highlight fixed</li>
+<li>ECMAScript 6 modules import now do not require closing semicolon</li>
+<li>ECMAScript 6 classes constructors now highlighted</li>
+<li>Template string support for Typescript, as for ECMAScript 6</li>
+</ul>
+<p>Other notable changes:</p>
+<ul>
+<li>License added to not minified browser build</li>
+</ul></div>
+
+    <li id="news-87">
+      <div class="time"><a href="#news-87">2015-09-06</a></div>
+      <div class="text"><p>Version 8.8.0</p>
+<p>New languages:</p>
+<ul>
+<li><em>Golo</em> by <a href="https://github.com/k33g">Philippe Charrière</a></li>
+<li><em>GAMS</em> by <a href="https://github.com/b-pos465">Stefan Bechert</a></li>
+<li><em>IRPF90</em> by <a href="https://github.com/scemama">Anthony Scemama</a></li>
+<li><em>Access logs</em> by <a href="https://github.com/Sannis">Oleg Efimov</a></li>
+<li><em>Crystal</em> by <a href="https://github.com/MakeNowJust">Tsuyusato Kitsune</a></li>
+</ul>
+<p>Notable fixes and improvements to existing languages:</p>
+<ul>
+<li>JavaScript highlighting no longer fails with ES6 default parameters</li>
+<li>Added keywords <code>async</code> and <code>await</code> to Python</li>
+<li>PHP heredoc support improved</li>
+<li>Allow preprocessor directives within C++ functions</li>
+</ul>
+<p>Other notable changes:</p>
+<ul>
+<li>Change versions to X.Y.Z SemVer-compatible format</li>
+<li>Added ability to build all targets at once</li>
+</ul></div>
+
+    <li id="news-86">
+      <div class="time"><a href="#news-86">2015-07-28</a></div>
+      <div class="text"><p>Version 8.7</p>
+<p>New languages:</p>
+<ul>
+<li><em>Zephir</em> by <a href="https://github.com/Sannis">Oleg Efimov</a></li>
+<li><em>Elm</em> by <a href="https://github.com/jvoigtlaender">Janis Voigtländer</a></li>
+<li><em>XQuery</em> by <a href="https://github.com/dirkk">Dirk Kirsten</a></li>
+<li><em>Mojolicious</em> by <a href="https://github.com/dotandimet">Dotan Dimet</a></li>
+<li><em>AutoIt</em> by Manh Tuan from <a href="https://github.com/J2TeaM">J2TeaM</a></li>
+<li><em>Toml</em> (ini extension) by <a href="https://github.com/GuillaumeGomez">Guillaume Gomez</a></li>
+</ul>
+<p>New Styles:</p>
+<ul>
+<li><em>Hopscotch</em> by <a href="https://github.com/idleberg">Jan T. Sott</a></li>
+<li><em>Grayscale</em> by <a href="https://github.com/simonmysun">MY Sun</a></li>
+</ul>
+<p>Notable fixes and improvements to existing languages:</p>
+<ul>
+<li>Fix encoding of images when copied over in certain builds</li>
+<li>Fix incorrect highlighting of the word "bug" in comments</li>
+<li>Treat decorators different from matrix multiplication in Python</li>
+<li>Fix traits inheritance highlighting in Rust</li>
+<li>Fix incorrect document</li>
+<li>Oracle keywords added to SQL language definition by <a href="https://github.com/Vadimtro">Vadimtro</a></li>
+<li>Postgres keywords added to SQL language definition by <a href="https://github.com/ghost">Benjamin Auder</a></li>
+<li>Fix registers in x86asm being highlighted as a hex number</li>
+<li>Fix highlighting for numbers with a leading decimal point</li>
+<li>Correctly highlight numbers and strings inside of C/C++ macros</li>
+<li>C/C++ functions now support pointer, reference, and move returns</li>
+</ul></div>
+
+    <li id="news-85">
+      <div class="time"><a href="#news-85">2015-05-20</a></div>
+      <div class="text"><p>Version 8.6</p>
+<p>New languages:</p>
+<ul>
+<li><em>C/AL</em> by <a href="https://github.com/kfuglsang">Kenneth Fuglsang</a></li>
+<li><em>DNS zone file</em> by <a href="https://github.com/enko">Tim Schumacher</a></li>
+<li><em>Ceylon</em> by <a href="https://github.com/lucaswerkmeister">Lucas Werkmeister</a></li>
+<li><em>OpenSCAD</em> by <a href="https://github.com/pzl">Dan Panzarella</a></li>
+<li><em>Inform7</em> by <a href="https://github.com/sequitur">Bruno Dias</a></li>
+<li><em>armasm</em> by <a href="https://github.com/pzl">Dan Panzarella</a></li>
+<li><em>TP</em> by <a href="https://github.com/unreal">Jay Strybis</a></li>
+</ul>
+<p>New Styles:</p>
+<ul>
+<li><em>Atelier Cave</em>, <em>Atelier Estuary</em>,
+  <em>Atelier Plateau</em> and <em>Atelier Savanna</em> by <a href="https://github.com/atelierbram">Bram de Haan</a></li>
+<li><em>Github Gist</em> by <a href="https://github.com/LouisBarranqueiro">Louis Barranqueiro</a></li>
+</ul>
+<p>Notable fixes and improvements to existing languages:</p>
+<ul>
+<li>Multi-line raw strings from C++11 are now supported</li>
+<li>Fix class names with dashes in HAML</li>
+<li>The <code>async</code> keyword from ES6/7 is now supported</li>
+<li>TypeScript functions handle type and parameter complexity better</li>
+<li>We unified phpdoc/javadoc/yardoc etc modes across all languages</li>
+<li>CSS .class selectors relevance was dropped to prevent wrong language detection</li>
+<li>Images is now included to CDN build</li>
+<li>Release process is now automated</li>
+</ul></div>
+
+    <li id="news-84">
+      <div class="time"><a href="#news-84">2015-04-02</a></div>
+      <div class="text"><p>Version 8.5</p>
+<p>New languages:</p>
+<ul>
+<li><em>pf.conf</em> by <a href="https://github.com/oldlaptop">Peter Piwowarski</a></li>
+<li><em>Julia</em> by <a href="https://github.com/bicycle1885">Kenta Sato</a></li>
+<li><em>Prolog</em> by <a href="https://github.com/rla">Raivo Laanemets</a></li>
+<li><em>Docker</em> by <a href="https://github.com/AlexisNo">Alexis Hénaut</a></li>
+<li><em>Fortran</em> by <a href="https://github.com/scemama">Anthony Scemama</a> and <a href="https://github.com/TApplencourt">Thomas Applencourt</a></li>
+<li><em>Kotlin</em> by <a href="https://github.com/cy6erGn0m">Sergey Mashkov</a></li>
+</ul>
+<p>New Styles:</p>
+<ul>
+<li><em>Agate</em> by <a href="https://github.com/tovic">Taufik Nurrohman</a></li>
+<li><em>Darkula</em> by <a href="https://www.jetbrains.com/">Jet Brains</a></li>
+<li><em>Atelier Sulphurpool</em> by <a href="https://github.com/atelierbram">Bram de Haan</a></li>
+<li><em>Android Studio</em> by <a href="https://github.com/kanytu">Pedro Oliveira</a></li>
+</ul>
+<p>Notable fixes and improvements to existing languages:</p>
+<ul>
+<li>ES6 features in JavaScript are better supported now by <a href="https://github.com/Justineo">Gu Yiling</a>.</li>
+<li>Swift now recognizes body-less method definitions.</li>
+<li>Single expression functions <code>def foo, do: ...</code> now work in Elixir.</li>
+<li>More uniform detection of built-in classes in Objective C.</li>
+<li>Fixes for number literals and processor directives in Rust.</li>
+<li>HTML <code>&lt;script&gt;</code> tag now allows any language, not just JavaScript.</li>
+<li>Multi-line comments are supported now in MatLab.</li>
+</ul></div>
+
+    <li id="news-83">
+      <div class="time"><a href="#news-83">2014-11-18</a></div>
+      <div class="text"><p>Version 8.4</p>
+<p>We've got the new <a href="https://highlightjs.org/static/demo/">demo page</a>! The obvious new feature is the new look, but
+apart from that it's got smarter: by presenting languages in groups it avoids
+running 10000 highlighting attempts after first load which was slowing it down
+and giving bad overall impression. It is now also being generated from test
+code snippets so the authors of new languages don't have to update both tests
+and the demo page with the same thing.</p>
+<p>Other notable changes:</p>
+<ul>
+<li>The <code>template_comment</code> class is gone in favor of the more general <code>comment</code>.</li>
+<li>Number parsing unified and improved across languages.</li>
+<li>C++, Java and C# now use unified grammar to highlight titles in
+  function/method definitions.</li>
+<li>The browser build is now usable as an AMD module, there's no separate build
+  target for that anymore.</li>
+<li>OCaml has got a <a href="https://github.com/isagalaev/highlight.js/pull/608#issue-46190207">comprehensive overhaul</a> by <a href="https://github.com/polazarus">Mickaël Delahaye</a>.</li>
+<li>Clojure's data structures and literals are now highlighted outside of lists
+  and we can now highlight Clojure's REPL sessions.</li>
+</ul>
+<p>New languages:</p>
+<ul>
+<li><em>AspectJ</em> by <a href="https://github.com/ozlerhakan">Hakan Özler</a></li>
+<li><em>STEP Part 21</em> by <a href="https://github.com/adamjcook">Adam Joseph Cook</a></li>
+<li><em>SML</em> derived by <a href="https://github.com/edalorzo">Edwin Dalorzo</a> from OCaml definition</li>
+<li><em>Mercury</em> by <a href="https://github.com/mucaho">mucaho</a></li>
+<li><em>Smali</em> by <a href="https://github.com/titze">Dennis Titze</a></li>
+<li><em>Verilog</em> by <a href="https://github.com/craftyjon">Jon Evans</a></li>
+<li><em>Stata</em> by <a href="https://github.com/bquistorff">Brian Quistorff</a></li>
+</ul></div>
+
+    <li id="news-82">
+      <div class="time"><a href="#news-82">2014-10-09</a></div>
+      <div class="text"><p>Version 8.3</p>
+<p>We streamlined our tool chain, it is now based entirely on node.js instead of
+being a mix of node.js, Python and Java. The build script options and arguments
+remained the same, and we've noted all the changes in the <a href="http://highlightjs.readthedocs.org/en/latest/building-testing.html">documentation</a>.
+Apart from reducing complexity, the new build script is also faster from not
+having to start Java machine repeatedly. The credits for the work go to <a href="https://github.com/sourrust">Jeremy
+Hull</a>.</p>
+<p>Some notable fixes:</p>
+<ul>
+<li>PHP and JavaScript mixed in HTML now live happily with each other.</li>
+<li>JavaScript regexes now understand ES6 flags "u" and "y".</li>
+<li><code>throw</code> keyword is no longer detected as a method name in Java.</li>
+<li>Fixed parsing of numbers and symbols in Clojure thanks to <a href="https://twitter.com/IvanKleshnin/status/514041599484231680">input from Ivan
+  Kleshnin</a>.</li>
+</ul>
+<p>New languages in this release:</p>
+<ul>
+<li><em>Less</em> by <a href="https://github.com/seven-phases-max">Max Mikhailov</a></li>
+<li><em>Stylus</em> by <a href="https://github.com/scien">Bryant Williams</a></li>
+<li><em>Tcl</em> by <a href="https://github.com/Nindaleth">Radek Liska</a></li>
+<li><em>Puppet</em> by <a href="https://github.com/Moliholy">Jose Molina Colmenero</a></li>
+<li><em>Processing</em> by <a href="https://github.com/paluka">Erik Paluka</a></li>
+<li><em>Twig</em> templates by <a href="https://github.com/lukeholder">Luke Holder</a></li>
+<li><em>PowerShell</em> by <a href="https://github.com/drmohundro">David Mohundro</a>, based on <a href="https://github.com/OctopusDeploy/Library/blob/master/app/shared/presentation/highlighting/powershell.js">the work of Nicholas
+  Blumhardt</a></li>
+<li><em>XL</em> by <a href="https://github.com/c3d">Christophe de Dinechin</a></li>
+<li><em>LiveScript</em> by <a href="https://github.com/Daiz-">Taneli Vatanen</a> and <a href="https://github.com/sevvie">Jen Evers-Corvina</a></li>
+<li><em>ERB</em> (Ruby in HTML) by <a href="https://github.com/lucasmazza">Lucas Mazza</a></li>
+</ul></div>
+
+  </ol>
+</div>
