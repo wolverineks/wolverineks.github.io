@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Intro to Git"
+date:   2016-01-01 08:40:52 -0800
+categories: jekyll update
+---
+
+* What are the benefits of version control?
+* How does git help you keep track of changes?
+* Why use GitHub to store your code?
+
+# What are the benefits of version control?
+
+Version control doesn't allow you to do things that you couldn't do without it. It merely allows you do those things easier.
+
+Every developer makes mistakes and has wanted to revert back to an older version of their code. Version control makes this easier than manually copying all the files and directories into new directories each time you want to make a checkpoint. Instead, all you have to do is issue 1 or 2 commands and the checkpoint, or snapshot, just happens. Easy.
+To revert back, again, just 1 or 2 commands and you're back in business.
+
+The same goes for maintaining multiple versions of your code. You want a production version, a testing version, and a development version. Just a few commands and the hard work is done for you.
+
+This is also very similar to having a version for experimenting with new features that you don't want to interfere with the regular development cycle. A simple 'git checkout -b {{branch_name}}' and you get a whole new workspace to play around with.
+
+What about trying to track down a bug? with version control you can easily compare two versions of code, see the differences, ad identify which changes must have caused the undesired behavior. 'git diff {{version_1}} {{version_2}}'.
+
+If you wanted to submit changes to the codebase, and yo want to make sure that the changes you make, aren't also conflicting with the changes that others are making, (did i mention version control makes it easy to have hundreds of developers working on the same project simultaneously? well, it does!), then merge the changes and let the version control tell you if there are any conflicts and courteously point them out to you.
+
+These are just some of the many benefits of using version control. Read the docs, tutorials, and just experiment and I'm sure you'll find a whole lot more as well.
+
+# How does git help you keep track of changes?
+
+[Git][git] is an open source version control system developed by Linus Torvalds. Some version control systems only record the changes made by each 'checkpoint'. This allows all the changes to be recorded and not take up very much space. Git on the other hand, takes 'snapshots' of the entire codebase and records the entirety of each document that was altered. Each snapshot is linked to the previous snapshot (and sometimes multiple snapshots) creating a clear timeline and indicating where exactly all the code changes came from. You can easily search for metadata associated with each change such as which developer made the change, when the change was made, what changes were made before that.
+
+# Why use Github to store code?
+
+[GitHub][github] is a website that stores all your code, and changes and provides a browser based graphical user interface. This service allows your code to be readable from anywhere in the world at all times. It allows any developer in the world to contribute to your project, if you so choose to let them. It allows you to explore all the changes to your code. It offers other developer centered services like issue tracking and a wiki.
+
+[git]: https://www.git-scm.com/
+[github]: https://www.github.com

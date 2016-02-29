@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "CSS"
+date:   2016-02-15 08:40:52 -0800
+categories: jekyll update
+---
+
+* What is the difference between margin, border, and padding?
+* What are the best practices associated with using classes vs. ids?
+* What are the differences between relative, absolute, fixed, and static positioning?
+* What does it mean to display inline vs using inline block?
+
+# What is the difference between margin, border, and padding?
+
+  * Margin is the spacing between objects on the page.
+  * Padding is the spacing between the border of an object and the content inside the object.
+  * Border is the edge of the object on the page.
+
+Imagine that each webpage is a dinner table. On the table are plates of food (objects). There are spaces between the plates (margin). There is food on each plate (content). There is space between the food and the edge of the plate (padding). And there is a decorative design on the edge of each plate (border).
+
+# What are the best practices associated with using classes vs. ids?
+
+Using ID's allows you to apply CSS rules to 1 element on the page at a time. The ID must be unique from all other ID's on the page.
+
+Using classes allows you to apply css rules to multiple elements on the page simultaneously. Naturally, a class can be applied to multiple elements on the page and does not need to be unique. Multiple classes can be applied to elements at the same time.
+
+Using classes allows you reuse your CSS rules. You can accomplish this by keeping your class rules small, and combining them on the elements. This reduces the amount of code you will right, maintaining themes across the site, while still allowing you to apply specific looks to individual elements on the page.
+
+# What are the differences between relative, absolute, fixed, and static positioning?
+
+**Relative positioning** allows you to place an element in the flow of the HTML, but then offset its position.
+
+**Absolute positioning** allows you to specify the exact location an element should be on the page, while retaining the ability to scroll with the rest of the elements on the page.
+
+**Fixed positioning** allows you to specify the exact location within the browser the element should be. These elements will not scroll with the rest of the elements on the page.
+
+**Static positioning** is the default positioning of elements on an HTML page. It will remain in the flow of the HTML, and determine its positioning behavior based on the display style.
+
+# What does it mean to display inline vs using inline block?
+
+Inline display means an element will be positioned to the right of the previous element if there is enough room, or on the next line if there is not enough room.
+
+Inline block is similar to inline, however, it will retain its height, in addition to its width.
