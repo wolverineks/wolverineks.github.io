@@ -1,0 +1,42 @@
+
+<hr />
+<p>layout: post
+title:  “Enumerable Methods”
+date:   2016-01-29 08:40:52 -0800
+categories: jekyll update
+—</p>
+
+<p>According to <a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-map">ruby-docs.org</a>,</p>
+
+<blockquote>
+  <p>Enum#map returns a new array with the results of running block once for every element in enum.</p>
+</blockquote>
+
+<p>If no block is given, an enumerator is returned instead.
+But what does this mean?
+#map is going to create and return a new array or hash.
+It will also execute the code inside the block once for every element in the array or hash.
+It will take the results for executing the code, and put it into the new array.
+This code may modify elements from the original array/hash, or not.
+Here are the examples from ruby-docs.org</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">4</span><span class="p">).</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="p">}</span>      <span class="c1">#=&gt; [1, 4, 9, 16]</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">4</span><span class="p">).</span><span class="nf">collect</span> <span class="p">{</span> <span class="s2">"cat"</span>  <span class="p">}</span>   <span class="c1">#=&gt; ["cat", "cat", "cat", "cat"]</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>In the first example, #map is iterating over the array, accessing the element of the current iteration, squaring it, and putting it into the returned array.
+In the second example, #collect (an alias for #map), is iterating over the array, executing the block of code (which is just the string “cat”), and inserting the result into the returned array.
+The same will happen if the method were called on a hash.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="p">{</span><span class="n">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="mi">2</span><span class="p">}.</span><span class="nf">map</span> <span class="p">{</span> <span class="s2">"cat"</span> <span class="p">}</span>    <span class="c1">#=&gt; ["cat", "cat"]</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>To demonstrate that this methods returns a new array…</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="p">}</span> <span class="o">==</span> <span class="n">a</span>    <span class="c1">#=&gt; false</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
