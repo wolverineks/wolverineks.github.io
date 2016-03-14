@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>looping in javascript</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="left wide post">
+      <h3>Ruby vs Javascript: Iterating Over an Array</h3>
+      <h4>February 14, 2016</h4>
+      <hr>
+
+      <p>
+        Both Javascript and Ruby have a built in mechanism for iterating over arrays.
+      </p>
+      <p>
+        In ruby, you can initialize a variable simply by typing the name of the variable and then
+        assigning the array to that variable.
+      </p>
+      <p>
+        Then you use the .each method, use the do..end syntax, and include the code that you wish to execute
+        for each element of the array.
+      </p>
+
+      <figure>
+        <pre>
+          <code>
+            some_array = [1,2,3,4,5]
+
+            some_array.each do |element|
+              do something
+            end
+          </code>
+        </pre>
+        <figcaption>Here is how to iterate over an array in Ruby.</figcaption>
+      </figure>
+
+      <p>
+        In javascript, you can iterate over an array by initializing a variable with the keyword 'var', typing the
+        name of the variable you wish to use, and assigning the array to that variable.
+
+      </p>
+      <p>
+        Then, you use the for syntax to iterate over the array. The 'i' is used as an index counter. It is incremented
+        with the 'i++' syntax. Inside the { } you write whateve rcode you wish to execute for each element of the array.
+      </p>
+
+      <figure>
+        <pre>
+          <code>
+            var someArray = [1,2,3,4,5];
+
+            for (i = 0; i < someArray.length; i++) {
+              do something;
+            }
+          </code>
+        </pre>
+        <figcaption>Here is how to iterate over an array in Ruby.</figcaption>
+      </figure>
+
+    </div>
+
+    <div class="right narrow">
+      <div class="archives">
+        <h3>Archives</h3>
+        <ul>
+          <li><a href="#">2016</a></li>
+          <ul>
+            <li><a href="#">January</a></li>
+          </ul>
+          <li><a href="#">2015</a></li>
+          <ul>
+            <li><a href="#">December</a></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="tags">
+        <h3>Tags</h3>
+        <ul>
+          <li><a href="#">Git</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <a href="../index.html" class="nav-button" id="button-home">HOME</a>
+      <a href="index.html" class="nav-button" id="button-home">BLOG</a>
+      <a href="#" class="nav-button" id="button-home">PROJECTS</a>
+      <a href="#" class="nav-button" id="button-home">CONTACT</a>
+    </nav>
+
+  </main>
+</body>
+
+</html>

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>wolverineks</title>
-  <meta name="description" content="web developer, musician, person">
+  <title>Copy Tests</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://wolverineks.github.io/">
+  <link rel="canonical" href="http://wolverineks.github.io/jekyll/update/rspec/tdd/2016/03/13/copy-test.html">
   <link rel="alternate" type="application/rss+xml" title="wolverineks" href="http://wolverineks.github.io/feed.xml">
 </head>
 
@@ -54,113 +54,55 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Copy Tests</h1>
+    <p class="post-meta"><time datetime="2016-03-13T09:40:52-07:00" itemprop="datePublished">Mar 13, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Mar 13, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/rspec/tdd/2016/03/13/rspec-tests.html">RSpec Tests</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 28, 2016</span>
+<!-- 1. Define some markup -->
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/28/poodr-method-args.html">POODR Method Args</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 18, 2016</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">a</span><span class="p">).</span><span class="nf">to</span> <span class="n">equal</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># passes if a.equal?(b)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/18/cheat-sheet.html">Cheat-Sheet</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 15, 2016</span>
+<div class="btn" data-clipboard-text="expect">
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/15/css.html">CSS</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 14, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/14/javascript.html">Javascript</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 29, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/29/variable-precedence.html">Variable/Method Name Precedence</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 29, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/29/example-class.html">Example Class</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 29, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/29/enumerable-methods.html">Enumerable Methods</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 25, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/25/designing-for-accessibility.html">Designing for Accessibility</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 21, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/21/tech.html">Functional Programming</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 20, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/20/array-hashes.html">Arrays and Hashes</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 1, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/01/git.html">Intro to Git</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">a</span><span class="p">).</span><span class="nf">to</span> <span class="n">equal</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># passes if a.equal?(b)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 </div>
+<p><button class="btn" data-clipboard-text="2">Copy</button>
+<button class="btn" data-clipboard-text="3">Copy</button></p>
+
+<!-- 2. Include library -->
+<!-- <script src="../dist/clipboard.min.js"></script> -->
+
+<!-- 3. Instantiate clipboard by passing a string selector -->
+<script>
+var clipboard = new Clipboard('.btn');
+clipboard.on('success', function(e) {
+    console.log(e);
+});
+clipboard.on('error', function(e) {
+    console.log(e);
+});
+</script>
+
+<!-- Target -->
+<p><input id="foo" value="https://github.com/zenorocha/clipboard.js.git" /></p>
+
+<!-- Trigger -->
+<p><button class="btn" data-clipboard-target="#foo">
+    <img src="assets/clippy.svg" alt="Copy to clipboard" />
+</button></p>
+
+  </div>
+
+</article>
 
       </div>
     </div>

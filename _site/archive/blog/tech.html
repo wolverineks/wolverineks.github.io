@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Intro to Function Programming</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="left wide post">
+      <h3>Functional Programming: Intro to Function Programming</h3>
+      <h4>February 21, 2016</h4>
+      <hr>
+      <p>
+        In computer programming there are many programmng paradigms. A programming paradigm is like a style of programming. Each programming paradigm has strengths and weaknesses. One such paradigm is Functional Programming.
+      </p>
+      <p>
+        Functional Programming, as its name implies, focuses on constructing functions. These functions give the same output for the same input, each and every time. Unlike Ruby, they have no side effects, and they are never destructive.
+      </p>
+      <p>
+        Here are some of the many functional programming languages:
+      </p>
+      <ul>
+        <a href="https://en.wikipedia.org/wiki/Charity_%28programming_language%29"><li>Charity</li></a>
+        <a href="https://en.wikipedia.org/wiki/Clean_%28programming_language%29"><li>Clean</li></a>
+        <a href="https://en.wikipedia.org/wiki/Coq"><li>Coq (Gallina)</li></a>
+        <a href="https://en.wikipedia.org/wiki/Curry_%28programming_language%29"><li>Curry</li></a>
+        <a href="https://en.wikipedia.org/wiki/Elm_%28programming_language%29"><li>Elm</li></a>
+        <a href="https://en.wikipedia.org/wiki/Frege_%28programming_language%29"><li>Frege</li></a>
+        <a href="https://en.wikipedia.org/wiki/Haskell_%28programming_language%29"><li>Haskell</li></a>
+        <a href="https://en.wikipedia.org/wiki/Hope_%28programming_language%29"><li>Hope</li></a>
+        <a href="https://en.wikipedia.org/wiki/Mercury_%28programming_language%29"><li>Mercury</li></a>
+        <a href="https://en.wikipedia.org/wiki/Miranda_%28programming_language%29"><li>Miranda</li></a>
+        <a href="https://en.wikipedia.org/wiki/Idris_%28programming_language%29"><li>Irdis</li></a>
+        <a href="https://en.wikipedia.org/wiki/SequenceL"><li>SequenceL</li></a>
+      </ul>
+
+      <h3>Primary Features</h3>
+      <p>
+        Some of the primary features of functional programming are higher order functions, immutable data, monads, referential transparency, lazy evaluation, and recursion.
+      </p>
+      <p>
+        Higher order functions are functions that take other functions as their arguments. Higher order functions can be simulated by closures, however, higher order functions are less verbose than closures.
+      </p>
+      <p>
+        Immutable Data means that data is supplied to the functions as a copy of the original data. Data is never altered by a function.
+      </p>
+      <p>
+        Monads are a beast to understand. It appears that in functional programming, monads can be used to simulate the mutation of data. A monad may allow this by stringing all the steps needed to get the desired data change together, and executing them on the copied data, each time you want to access the changed data. This is just a guess. Don't shoot me...
+      </p>
+      <p>
+        Referential Transparency means that a variable, once assigned a value, can never be assigned to a different value. This allows you to refer to that variable at any time, and be assured you will be accessing the original value, and not a value that has been changed in some other place in the code.
+      </p>
+      <p>
+        Lazy evaluation means that the arguments passed into a function are not evaluated, unless they are required to be evaluated in order to evaluate the function. For instance, if a function is evaluating the length of an array, it does not need to evaluate any of the elements of the array to determine its length. However, if the output of the function is dependent on the evaluation of some of the elements, then the elements will be evaluated.
+      </p>
+      <p>
+        Recursion is the primary method of iterating in a functional style language. Recursion is when a function calls itself, drilling deeper into the data until a base vase is reached, at which point the function can finally evaluate.
+      </p>
+    </div>
+
+    <div class="right narrow">
+      <div class="archives">
+        <h3>Archives</h3>
+        <ul>
+          <li><a href="#">2016</a></li>
+          <ul>
+            <li><a href="#">January</a></li>
+          </ul>
+          <li><a href="#">2015</a></li>
+          <ul>
+            <li><a href="#">December</a></li>
+          </ul>
+        </ul>
+      </div>
+
+      <div class="tags">
+        <h3>Tags</h3>
+        <ul>
+          <li><a href="#">Git</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <a href="../index.html" class="nav-button" id="button-home">HOME</a>
+      <a href="index.html" class="nav-button" id="button-home">BLOG</a>
+      <a href="#" class="nav-button" id="button-home">PROJECTS</a>
+      <a href="#" class="nav-button" id="button-home">CONTACT</a>
+    </nav>
+
+  </main>
+</body>
+
+</html>
