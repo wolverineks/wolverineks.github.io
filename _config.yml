@@ -20,3 +20,8 @@ markdown: kramdown
 # Added by wolv to fix jekyll bug with excerpts
 # https://github.com/jekyll/jekyll/issues/4564
 excerpt_separator: ""
+
+# Added by wolv to display all tests in spec post as partials
+collections:
+  tests:
+    output: true

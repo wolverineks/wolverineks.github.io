@@ -363,6 +363,135 @@ clipboard.on('error', function(e) {
 <!-- ///////////////////////////////////////////////////// -->
 <hr />
 
+<p><a name="COUNTER"></a></p>
+
+<h3 id="counter">COUNTER</h3>
+
+<div class="test" data-clipboard-text="expect { Counter.increment }.to change{Counter.count}.from(0).to(1)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}.</span><span class="nf">from</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { Counter.increment }.to change{Counter.count}.by(2)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}.</span><span class="nf">by</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { Counter.increment }.not_to change{Counter.count}">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">not_to</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { Counter.increment }.to_not change{Counter.count}">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">to_not</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<hr />
+
+<p><a name="ERRORS"></a></p>
+
+<h3 id="errors">ERRORS</h3>
+
+<div class="test" data-clipboard-text="expect { raise StandardError }.to raise_error">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="no">StandardError</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(RuntimeError)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="no">RuntimeError</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error('oops')">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="s2">"oops"</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(/op/)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="sr">/op/</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(RuntimeError, 'oops')">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="no">RuntimeError</span><span class="p">,</span> <span class="s2">"oops"</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(RuntimeError, /op/)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="no">RuntimeError</span><span class="p">,</span> <span class="sr">/op/</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
 <p><a name="HASHES"></a></p>
 
 <h3 id="hashes">HASHES</h3>
@@ -459,165 +588,6 @@ clipboard.on('error', function(e) {
 </div>
 
 <!-- ///////////////////////////////////////////////////// -->
-<hr />
-
-<p><a name="STRINGS"></a></p>
-
-<h3 id="strings">STRINGS</h3>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a').to be &lt; 'b'">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s1">'a'</span><span class="p">).</span><span class="nf">to</span> <span class="n">be</span> <span class="o">&lt;</span> <span class="s1">'b'</span>
-<span class="c1"># passes if 'a' &lt; 'b'</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(/foo/).to match('food')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="s2">"food"</span><span class="p">)</span>
-<span class="c1"># passes</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(/foo/).to match('drinks')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="s2">"drinks"</span><span class="p">)</span>
-<span class="c1"># fails</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a string').to include('a')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a string').to include('str')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"str"</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a string').to include('str', 'g')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"str"</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a string').not_to include('foo')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">not_to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"foo"</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a string').to match(/str/)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="sr">/str/</span><span class="p">)</span>
-<span class="c1"># passes</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('a string').to match(/foo/)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">)</span>
-<span class="c1"># fails</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('this string').to end_with 'string'">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">end_with</span> <span class="s2">"string"</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('this string').not_to end_with 'stringy'">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">end_with</span> <span class="s2">"stringy"</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('this string').to start_with 'this'">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">start_with</span> <span class="s2">"this"</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect('this string').not_to start_with 'that'">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">start_with</span> <span class="s2">"that"</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
 <hr />
 
 <p><a name="INTEGERS"></a></p>
@@ -787,54 +757,6 @@ clipboard.on('error', function(e) {
 
 <hr />
 
-<p><a name="COUNTER"></a></p>
-
-<h3 id="counter">COUNTER</h3>
-
-<div class="test" data-clipboard-text="expect { Counter.increment }.to change{Counter.count}.from(0).to(1)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}.</span><span class="nf">from</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { Counter.increment }.to change{Counter.count}.by(2)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}.</span><span class="nf">by</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { Counter.increment }.not_to change{Counter.count}">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">not_to</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { Counter.increment }.to_not change{Counter.count}">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="no">Counter</span><span class="p">.</span><span class="nf">increment</span> <span class="p">}.</span><span class="nf">to_not</span> <span class="n">change</span><span class="p">{</span><span class="no">Counter</span><span class="p">.</span><span class="nf">count</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<hr />
-
 <h2 id="type">TYPE</h2>
 
 <div class="test" data-clipboard-text="expect(a).to be(b)">
@@ -916,195 +838,6 @@ clipboard.on('error', function(e) {
 <!-- ///////////////////////////////////////////////////// -->
 
 <hr />
-
-<p><a name="TRUE/FALSE"></a></p>
-
-<h3 id="truefalse">TRUE/FALSE</h3>
-
-<div class="test" data-clipboard-text="expect(obj).to be_truthy ">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_truthy</span>
-<span class="c1"># passes if obj is truthy (not nil or false)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(obj).to be_falsey">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_falsey</span>
-<span class="c1"># passes if obj is falsy (nil or false)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(obj).to be_nil">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_nil</span>
-<span class="c1"># passes if obj is nil</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(obj).not_to be_truthy">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">be_truthy</span>
-<span class="c1"># passes if obj is not truthy (nil or false)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(obj).not_to be_falsey">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">be_falsey</span>
-<span class="c1"># passes if obj is not falsy (not nil or false)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(obj).not_to be_nil">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">be_nil</span>
-<span class="c1"># passes if obj is not nil</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(obj).to exist">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">exist</span>
-<span class="c1"># passes if obj.exist? or obj.exists?</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect(person).to have_attributes(:name =&gt; 'Jim', :username =&gt; 'jimbo')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">person</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_attributes</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Jim"</span><span class="p">,</span> <span class="ss">:username</span> <span class="o">=&gt;</span> <span class="s1">'jimbo'</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<hr />
-
-<p><a name="ERRORS"></a></p>
-
-<h3 id="errors">ERRORS</h3>
-
-<div class="test" data-clipboard-text="expect { raise StandardError }.to raise_error">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="no">StandardError</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(RuntimeError)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="no">RuntimeError</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error('oops')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="s2">"oops"</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(/op/)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="sr">/op/</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(RuntimeError, 'oops')">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="no">RuntimeError</span><span class="p">,</span> <span class="s2">"oops"</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
-
-<div class="test" data-clipboard-text="expect { raise 'oops' }.to raise_error(RuntimeError, /op/)">
-
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="k">raise</span> <span class="s2">"oops"</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">raise_error</span><span class="p">(</span><span class="no">RuntimeError</span><span class="p">,</span> <span class="sr">/op/</span><span class="p">)</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-</div>
-
-<!-- ///////////////////////////////////////////////////// -->
 
 <div class="test" data-clipboard-text="expect(obj).to respond_to(:foo)">
 
@@ -1226,14 +959,18 @@ clipboard.on('error', function(e) {
 
 <hr />
 
-<p><a name="YIELD"></a></p>
+<p><a name="STRINGS"></a></p>
 
-<h3 id="yield">YIELD</h3>
+<h3 id="strings">STRINGS</h3>
 
-<div class="test" data-clipboard-text="expect { |b| MyClass.yield_once_with(1, &amp;b) }.to yield_control">
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('a').to be &lt; 'b'">
 
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_once_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="w">
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s1">'a'</span><span class="p">).</span><span class="nf">to</span> <span class="n">be</span> <span class="o">&lt;</span> <span class="s1">'b'</span>
+<span class="c1"># passes if 'a' &lt; 'b'</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 
@@ -1241,10 +978,12 @@ clipboard.on('error', function(e) {
 
 <!-- ///////////////////////////////////////////////////// -->
 
-<div class="test" data-clipboard-text="expect { |b| MyClass.dont_yield(&amp;b) }.not_to yield_control">
+<div class="test" data-clipboard-text="expect(/foo/).to match('food')">
 
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">dont_yield</span><span class="p">(</span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">not_to</span> <span class="n">yield_control</span><span class="w">
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="s2">"food"</span><span class="p">)</span>
+<span class="c1"># passes</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 
@@ -1252,10 +991,12 @@ clipboard.on('error', function(e) {
 
 <!-- ///////////////////////////////////////////////////// -->
 
-<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.twice">
+<div class="test" data-clipboard-text="expect(/foo/).to match('drinks')">
 
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">twice</span><span class="w">
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="s2">"drinks"</span><span class="p">)</span>
+<span class="c1"># fails</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 
@@ -1263,10 +1004,10 @@ clipboard.on('error', function(e) {
 
 <!-- ///////////////////////////////////////////////////// -->
 
-<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.exactly(2).times">
+<div class="test" data-clipboard-text="expect('a string').to include('a')">
 
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">exactly</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nf">times</span><span class="w">
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 
@@ -1274,10 +1015,10 @@ clipboard.on('error', function(e) {
 
 <!-- ///////////////////////////////////////////////////// -->
 
-<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.at_least(1)">
+<div class="test" data-clipboard-text="expect('a string').to include('str')">
 
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">at_least</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"str"</span><span class="p">)</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 
@@ -1285,10 +1026,91 @@ clipboard.on('error', function(e) {
 
 <!-- ///////////////////////////////////////////////////// -->
 
-<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.at_most(3).times">
+<div class="test" data-clipboard-text="expect('a string').to include('str', 'g')">
 
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">at_most</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nf">times</span><span class="w">
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"str"</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('a string').not_to include('foo')">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">not_to</span> <span class="kp">include</span><span class="p">(</span><span class="s2">"foo"</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('a string').to match(/str/)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="sr">/str/</span><span class="p">)</span>
+<span class="c1"># passes</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('a string').to match(/foo/)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"a string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">match</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">)</span>
+<span class="c1"># fails</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('this string').to end_with 'string'">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">end_with</span> <span class="s2">"string"</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('this string').not_to end_with 'stringy'">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">end_with</span> <span class="s2">"stringy"</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('this string').to start_with 'this'">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">to</span> <span class="n">start_with</span> <span class="s2">"this"</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect('this string').not_to start_with 'that'">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="s2">"this string"</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">start_with</span> <span class="s2">"that"</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
 
@@ -1365,6 +1187,187 @@ clipboard.on('error', function(e) {
 
 
 </div>
+
+<hr />
+
+<p><a name="TRUE/FALSE"></a></p>
+
+<h3 id="truefalse">TRUE/FALSE</h3>
+
+<div class="test" data-clipboard-text="expect(obj).to be_truthy ">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_truthy</span>
+<span class="c1"># passes if obj is truthy (not nil or false)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(obj).to be_falsey">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_falsey</span>
+<span class="c1"># passes if obj is falsy (nil or false)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(obj).to be_nil">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_nil</span>
+<span class="c1"># passes if obj is nil</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(obj).not_to be_truthy">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">be_truthy</span>
+<span class="c1"># passes if obj is not truthy (nil or false)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(obj).not_to be_falsey">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">be_falsey</span>
+<span class="c1"># passes if obj is not falsy (not nil or false)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(obj).not_to be_nil">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">not_to</span> <span class="n">be_nil</span>
+<span class="c1"># passes if obj is not nil</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(obj).to exist">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="nf">to</span> <span class="n">exist</span>
+<span class="c1"># passes if obj.exist? or obj.exists?</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect(person).to have_attributes(:name =&gt; 'Jim', :username =&gt; 'jimbo')">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span><span class="p">(</span><span class="n">person</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_attributes</span><span class="p">(</span><span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">"Jim"</span><span class="p">,</span> <span class="ss">:username</span> <span class="o">=&gt;</span> <span class="s1">'jimbo'</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<p><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong><strong>__</strong>___s</p>
+
+<p><a name="YIELD"></a></p>
+
+<h3 id="yield">YIELD</h3>
+
+<div class="test" data-clipboard-text="expect { |b| MyClass.yield_once_with(1, &amp;b) }.to yield_control">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_once_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { |b| MyClass.dont_yield(&amp;b) }.not_to yield_control">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">dont_yield</span><span class="p">(</span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">not_to</span> <span class="n">yield_control</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.twice">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">twice</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.exactly(2).times">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">exactly</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nf">times</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.at_least(1)">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">at_least</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<!-- ///////////////////////////////////////////////////// -->
+
+<div class="test" data-clipboard-text="expect { |b| MyClass.yield_twice_with(1, &amp;b) }.to yield_control.at_most(3).times">
+
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="n">expect</span> <span class="p">{</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="no">MyClass</span><span class="p">.</span><span class="nf">yield_twice_with</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">}.</span><span class="nf">to</span> <span class="n">yield_control</span><span class="p">.</span><span class="nf">at_most</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nf">times</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+</div>
+
+<hr />
+
 
   </div>
 
