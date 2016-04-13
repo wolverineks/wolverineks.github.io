@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>wolverineks</title>
-  <meta name="description" content="web developer, musician, person">
+  <title>Slim + Simple Form + HTML5 Validations + Partials + remote: true</title>
+  <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://wolverineks.github.io/">
+  <link rel="canonical" href="http://wolverineks.github.io/jekyll/update/rspec/tdd/2016/04/11/rails-remotetrue-simpleformfor-partials-html5validations.html">
   <link rel="alternate" type="application/rss+xml" title="wolverineks" href="http://wolverineks.github.io/feed.xml">
 </head>
 
@@ -54,121 +54,142 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Slim + Simple Form + HTML5 Validations + Partials + remote: true</h1>
+    <p class="post-meta"><time datetime="2016-04-11T19:40:52-07:00" itemprop="datePublished">Apr 11, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Apr 11, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>Rails has a really cool way to automatically ajaxify your forms.
+Rails has a really cool way to render collections.
+Rails has a really cool gem for making forms.
+Rails has a really cool templating engine called Slim.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/rspec/tdd/2016/04/11/rails-remotetrue-simpleformfor-partials-html5validations.html">Slim + Simple Form + HTML5 Validations + Partials + remote: true</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 13, 2016</span>
+<p>In this blog post, I’m going to demonstrate how I used all of them on the same project.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/rspec/tdd/2016/03/13/rspec-tests.html">RSpec Tests</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 28, 2016</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/28/poodr-method-args.html">POODR Method Args</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 18, 2016</span>
+<p>Let’s start with a brand new <a href="http://www.rubyonrails.com">rails 4</a> app, and generate some scaffolding…</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/18/cheat-sheet.html">Cheat-Sheet</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 15, 2016</span>
+<p><img src="/imgs/rails_new.png" alt="rails new" /></p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/15/css.html">CSS</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 14, 2016</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/02/14/javascript.html">Javascript</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 29, 2016</span>
+<p>Then add the <a href="https://github.com/slim-template/slim-rails">slim-rails</a> gem and the <a href="https://github.com/plataformatec/simple_form">simple_forms</a> gem to your gemfile.</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/29/variable-precedence.html">Variable/Method Name Precedence</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 29, 2016</span>
+<p><img src="/imgs/gems.png" alt="gems" /></p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/29/example-class.html">Example Class</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 29, 2016</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/29/enumerable-methods.html">Enumerable Methods</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 25, 2016</span>
+<p>Next, bundle install…</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/25/designing-for-accessibility.html">Designing for Accessibility</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 21, 2016</span>
+<p><img src="/imgs/bundle_install.png" alt="bundle_install" /></p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/21/tech.html">Functional Programming</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 20, 2016</span>
+<hr />
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/20/array-hashes.html">Arrays and Hashes</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 1, 2016</span>
+<p>Let’s generate some scaffolding for comments</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/01/01/git.html">Intro to Git</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><img src="/imgs/scaffolding.png" alt="scaffolding" /></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<hr />
 
-</div>
+<p>Create and migrate the database.</p>
+
+<p><img src="/imgs/create_migrate.png" alt="create_migrate" /></p>
+
+<hr />
+
+<p>Let’s run rails server to see what we get…</p>
+
+<p><img src="/imgs/server.png" alt="server" /></p>
+
+<hr />
+
+<p>So far so good…</p>
+
+<p><img src="/imgs/rails.png" alt="rails" /></p>
+
+<hr />
+
+<p>Let’s checkout some of the magic of rails…</p>
+
+<p><img src="/imgs/comments.png" alt="comments" /></p>
+
+<hr />
+
+<p>Just for fun, let’s add the comment form to the comment index.
+To do this, add this single line to the comments/index,</p>
+
+<p><img src="/imgs/form.png" alt="form" /></p>
+
+<hr />
+
+<p>Add this line to the comments_controller.rb</p>
+
+<p><img src="/imgs/comment.png" alt="comment" /></p>
+
+<hr />
+
+<p>Copy the inside of the each loop on the index into a partial named “comment.html.slim”.</p>
+
+<p><img src="/imgs/loop.png" alt="loop" /></p>
+
+<hr />
+
+<p>Change the index to render @comments</p>
+
+<p><img src="/imgs/render.png" alt="render" /></p>
+
+<hr />
+
+<p>Change the form to ‘remote: true’</p>
+
+<p><img src="/imgs/remote.png" alt="remote" /></p>
+
+<hr />
+
+<p>Back in the controller, add this line.</p>
+
+<p><img src="/imgs/format_js.png" alt="format_js" /></p>
+
+<hr />
+
+<p>Change the form to use simple_form</p>
+
+<p><img src="/imgs/simple_form.png" alt="simple_form" /></p>
+
+<hr />
+
+<p>Add Validations to the comments model</p>
+
+<p><img src="/imgs/validations.png" alt="validations" /></p>
+
+<hr />
+
+<p>Adding validations and using simple_form automatically gets you some sweet HTML5 client-side validations.</p>
+
+<p><img src="/imgs/html5_validations.png" alt="html5_validations" /></p>
+
+<hr />
+
+<p>Create and add the following to a template in comments called ‘create.js.slim’.</p>
+
+<p><a href="http://www.rubydoc.info/gems/slim/frames#Text_content">Yes, the pipe at the beginning is necessary</a>.</p>
+
+<p><img src="/imgs/create_js.png" alt="create_js" /></p>
+
+<hr />
+
+<p>And if everything went according to plan, you should have a pretty sweet ajaxified comments index/new/form thing.</p>
+
+<p><img src="/imgs/blog.gif" alt="blog" /></p>
+
+
+  </div>
+
+</article>
 
       </div>
     </div>
