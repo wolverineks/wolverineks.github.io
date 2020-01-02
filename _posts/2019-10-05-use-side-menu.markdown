@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Initialize Array with Length"
+title: "React Hook: useSideMenu"
 date: 2019-10-05 18:40:52 -0800
 categories: react react-native hook side-menu
 ---
