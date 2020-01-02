@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React Router: testing "location.state""
+title: "React Router: testing 'location.state'"
 date: 2019-12-14 18:40:52 -0800
 categories: react router testing
 ---
