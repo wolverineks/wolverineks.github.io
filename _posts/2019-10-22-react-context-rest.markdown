@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React Contex: (CRUD / REST)-ful Entities"
+title: "React Context: (CRUD / REST)-ful Entities"
 date: 2019-10-22 18:40:52 -0800
 categories: react context rest crud
 ---
