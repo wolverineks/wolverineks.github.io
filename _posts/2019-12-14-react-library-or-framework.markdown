@@ -33,7 +33,13 @@ After longer still, I realized Redux was good at encapsulating business logic, b
 
 So to better clarify these thoughts, I made an app. It's a simple app. TicTacToe. [Here is is](https://csb-0q363.netlify.com/), just so you believe me.
 
-{% codesandbox tic-tac-toe-0q363 %}
+<iframe
+     src="https://codesandbox.io/embed/tic-tac-toe-0q363?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="tic-tac-toe"
+     allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+   ></iframe>
 
 Then, I looked at all the places where I used React to see if I could figure out what I was using it for. If it's used for "fundamental stuff" that shapes the app, then it must be a framework, right?
 
