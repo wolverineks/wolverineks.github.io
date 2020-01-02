@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Initialize Array with Length"
-date: 2019-21-10 18:40:52 -0800
+date: 2019-09-21 18:40:52 -0800
 categories: javascript array
 ---
 

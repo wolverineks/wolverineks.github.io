@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React Router: Simplifying a user flow"
-date: 2019-10-21 18:40:52 -0800
+date: 2019-10-15 18:40:52 -0800
 categories: react react-router
 ---
 
